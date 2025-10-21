@@ -1,12 +1,13 @@
-# Input
+# One instruction
 > A
 
-A is a nonnegative integer in base 10, it represents a location in memory.  
+A is a nonnegative integer in base 10, it represents a location in memory. Numbers are seperated by some whitespace between them.  
 The result from the binary operation `[0] NAND a` is stored at location `0`. The **old value** from location 0 is moved to position A. 
 `a` here is the value at position `A`; `[0]` is value at position `0`    
+After theese operations the next number in the source file is executed, when the end of the source file is reached it repeats the commands from the start but keeping the current memory state.  
+
 4294967296 (=2^32) bits of memory are available.  
 Memory does not guarantee any initial state.  
-When the end of the source file is reached it repeats the commands from the start but keeping the current memory state.
 
 # Memory I/O
 ## Halt
@@ -28,3 +29,4 @@ See also
 [craftyBLUE/Nand32](https://github.com/craftyBLUE/Nand32)  
 
 [craftyBLUE/Nand2](https://github.com/craftyBLUE/Nand2)
+
