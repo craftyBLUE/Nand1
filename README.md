@@ -25,6 +25,9 @@ Put your Nand1 code in a file with a `.nand1` extension and run it like so:
 
 > ./nand1 hello_world.nand1  
 
+# Comments
+In the source file, everything after a '#' up to the end of the line is ignored.
+
 See also  
 [craftyBLUE/Nand32](https://github.com/craftyBLUE/Nand32)  
 
