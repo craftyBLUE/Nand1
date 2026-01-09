@@ -1,6 +1,5 @@
 #include <iostream>
 #include <fstream>
-#include <sstream>
 #include <vector>
 using namespace std;
 
@@ -29,7 +28,7 @@ int ci = 0;
 4 -> signal inputRead
 5..15 -> reserved
 16..23 -> output char
-24..31 -> input char
+24..32 -> input char
 */
 void memoryIO() {
   if (get(3)) { // outputWrite (bit)
@@ -53,20 +52,11 @@ int main(int argc, char* argv[]) {
     return -1;
   }
   
-  {
-    ifstream sourceCode(argv[1]);
-    string inputLine, token;
-    while (sourceCode) { //until the end of the file
-      getline(sourceCode, inputLine);
-      stringstream inputLineStream(inputLine);
-      while (inputLineStream >> token) {
-        if (token[0] == '#') break; //comments are everything on the line after '#'
-        commands.push_back(stoi(token)); //string to int
-      }
-      
-    }
-    sourceCode.close();
+  ifstream sourceCode(argv[1]);
+  while (sourceCode >> a) {
+    commands.push_back(a);
   }
+  sourceCode.close();
   
   while (not get(2)) { //halt when value at position 2 is = 1
     a = commands[ci];

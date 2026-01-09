@@ -1,14 +1,17 @@
-# Input
+# One instruction
 > A
 
-A is a nonnegative integer in base 10, it represents a location in memory.  
+A is a nonnegative integer in base 10, it represents a location in memory. Numbers are seperated by some whitespace between them.  
 The result from the binary operation `[0] NAND a` is stored at location `0`. The **old value** from location 0 is moved to position A. 
 `a` here is the value at position `A`; `[0]` is value at position `0`    
+After theese operations the next number in the source file is executed, when the end of the source file is reached it repeats the commands from the start but keeping the current memory state.  
+
 4294967296 (=2^32) bits of memory are available.  
 Memory does not guarantee any initial state.  
 
 # Memory I/O
-Setting value 1 to location `2` in memory halts the program and also dumps the memory to stdout.  
+## Halt
+Setting value 1 to location `2` in memory halts and exits the program.
 
 ## Output
 Setting value 1 to location `3` in memory prints to the screen the ascii character located between and including location `16` and `23`. 
@@ -22,9 +25,8 @@ Put your Nand1 code in a file with a `.nand1` extension and run it like so:
 
 > ./nand1 hello_world.nand1  
 
-# Comments
-In the source file, everything after a '#' up to the end of the line is ignored.
-
 See also  
 [craftyBLUE/Nand32](https://github.com/craftyBLUE/Nand32)  
+
 [craftyBLUE/Nand2](https://github.com/craftyBLUE/Nand2)
+
