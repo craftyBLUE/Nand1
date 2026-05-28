@@ -25,6 +25,12 @@ Put your Nand1 code in a file with a `.nand1` extension and run it like so:
 
 > ./nand1 hello_world.nand1  
 
+# More on Esolangs wiki
+[Esolangs Nand1](https://esolangs.org/wiki/Nand1)
+
+# Nandscript compiler for Nand1 (nand1c)
+[craftyBLUE/nand1c](https://github.com/craftyBLUE/nand1c)
+
 # Comments
 In the source file, everything after a '#' up to the end of the line is ignored.
 
